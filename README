@@ -1,0 +1,20 @@
+This program uses flask and python Python 2.7.10
+
+To run this application at the command prompt
+
+$ python app.ph
+
+Open your browser to: http://localhost:5000/#
+
+config.json is where API keys are stored for both the weather company and AirNow.
+If you clone this project you will need to get your own keys
+
+Documentation on AirNow can be found at: https://docs.airnowapi.org/forecastsbyzip/docs
+AirNow key is called airQKey
+
+The weather company key is called twcKey and was provided by TWCo
+
+To Do:
+Motivator seed has issues - need better way to rand
+Results.html needs to be made pretty
+tendayForecast.py need to put the DF results in a better format
