@@ -6,7 +6,7 @@ import quote
 # air quality
 # Forecasted AQI category number:
 # 1 = Good, 2 = Moderate, 3 = Unhealthy for Sensitive Groups, 4 = Unhealthy, 5 = Very Unhealthy, 6 = Hazardous, 7 = Unavailable
-
+# check messages
 def motivator(aq,ts):
     #print 'Today'
     today = ts.iloc[:1]

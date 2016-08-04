@@ -52,7 +52,7 @@ def result():
     return render_template("result.html",result = result,zip = zip, aqdata = aqdata,
                            twcsummary = twcsummary, airstatus = z[3], weatherquote = z[0],today = z[1],week = z[2],
                            bikequote = z[4], wetquote = z[5], tempstatus = z[6])
-# return aqsumm = z0, today = z1, week = z2, airstatus = z3, brq = z4, wq =z5
+
 
 if __name__ == '__main__':
     app.run(debug = True)
