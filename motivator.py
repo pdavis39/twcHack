@@ -65,17 +65,27 @@ def motivator(aq,ts):
             tempstatus = 'treadmill may be your best bet'
     #print 'hmmm',mintmp, maxtmp
 
-    for line in aq:
-        cat = line['Category']
-        qt = line['ParameterName']
-        num = line['Category']['Number']
-    #    print num
-        if num == 1:
-            aqsumm = 'The air quality is good'
-        if num == 2:
-            aqsumm = 'The air is moderate'
-        if num >= 3:
-            aqsumm = 'The air is unhealthy'
+    if aq:
+        for line in aq:
+            # Category 0 = no service
+
+            #cat = line['Category']
+            #qt = line['ParameterName']
+            if line['Category']['Number']:
+                num = line['Category']['Number']
+            else:
+                num = 0
+            print num
+            if num == 0:
+                aqsumm = 'Air quality monitoring sensors not available'
+            if num == 1:
+                aqsumm = 'The air quality is good'
+            if num == 2:
+                aqsumm = 'The air is moderate'
+            if num >= 3:
+                aqsumm = 'The air is unhealthy'
+    else:
+        aqsumm = 'Air quality monitoring tool unavailable'
     week = ts.iloc[1:8]
     return aqsumm, today, week, airstatus, brq, wq, tempstatus
 

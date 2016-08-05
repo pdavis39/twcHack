@@ -14,7 +14,9 @@ def airquality(x,y,z):
     json_text = r.read().decode('utf-8')
     # Convert it to a Python dictionary
     aqresult = json.loads(json_text)
-    return aqresult
+    if aqresult:
+
+        return aqresult
 
 #aqdata = airquality(39.044855,-77.38701,'2016-08-02')
 
