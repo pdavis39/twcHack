@@ -3,6 +3,7 @@ import json
 import os
 import urllib2
 import pandas as pd
+
 from pandas.io.json import json_normalize
 import loadConfig
 
@@ -94,9 +95,10 @@ def tenddayforcast(x,y):
 
     #print df['lunar_phase'], df['min_temp'], df['max_temp'], df['dow'], df['narrative']
     twcsummary = df[['dow','lunar_phase', 'min_temp', 'max_temp', 'day.phrase_22char', 'day.wind_phrase','day.precip_type']]
-    #print twcsummary
+    #twcsummary = twcsummary.values
     return twcsummary
 
 #twcsummary = tenddayforcast(39.044855,-77.38701)
-#print twcsummary
+
+#print twcsummary.values
 #print("***** Finished******")

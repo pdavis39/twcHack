@@ -42,6 +42,7 @@ def result():
         #10dayforecast
         global twcsummary
         twcsummary = tendayForecast.tenddayforcast(zip[0],zip[1])
+
         #motivator
         #3 variables
         global z
@@ -50,7 +51,7 @@ def result():
         z = motivator.motivator(aqdata,twcsummary)
 
     return render_template("result.html",result = result,zip = zip, aqdata = aqdata,
-                           twcsummary = twcsummary, airstatus = z[3], weatherquote = z[0],today = z[1],week = z[2],
+                           airstatus = z[3], weatherquote = z[0],today = z[1],week = z[2],
                            bikequote = z[4], wetquote = z[5], tempstatus = z[6])
 
 

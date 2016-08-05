@@ -7,23 +7,35 @@
 <body>
 
 <h1>Your Weather Report</h1>
-<h1>Need to make nice</h1>
-
-<h2>calculated weather quote</h2>
-
-<h3>{{ weatherquote }}</h3>
-
-<h2>air status</h2>
-
-<h3>{{ airstatus }}</h3>
 
 <h2>today's weather</h2>
 
-<h3>{{ today }}</h3>
+<h3>{{ today.values }}</h3>
 
-<h2>week's weather</h2>
+<h1>Week's weather</h1>
+<div><p>{{ week.values[0][0]}} </p></div>
+<div><p>{{ week.values[1] }} </p></div>
+<div><p>{{ week.values[2] }} </p></div>
+<div><p>{{ week.values[3] }} </p></div>
+<div><p>{{ week.values[4] }} </p></div>
+<div><p>{{ week.values[5] }} </p></div>
+<div><p>{{ week.values[6] }} </p></div>
 
-<h3>{{ week }}</h3>
+
+<h2>temp status</h2>
+
+<h3>{{ tempstatus }}</h3>
+<h2>calculated weather quote</h2>
+
+<h3>{{ airstatus }}</h3>
+
+
+<h2>air status</h2>
+
+<h3>{{ weatherquote }}</h3>
+
+
+
 
 <h2>bike run quotes</h2>
 
@@ -33,9 +45,7 @@
 
 <h3>{{ wetquote }}</h3>
 
-<h2>temp status</h2>
 
-<h3>{{ tempstatus}}</h3>
 
 
 </body>
