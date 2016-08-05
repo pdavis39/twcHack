@@ -55,5 +55,14 @@ def result():
                            bikequote = z[4], wetquote = z[5], tempstatus = z[6])
 
 
+#<h2>temp status</h2>
+
+#<h3>{{ tempstatus }}</h3>
+
+#<h2>calculated weather quote</h2>
+
+#<h3>{{ airstatus }}</h3>
+
+
 if __name__ == '__main__':
     app.run(debug = True)

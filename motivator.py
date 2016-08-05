@@ -75,9 +75,9 @@ def motivator(aq,ts):
                 num = line['Category']['Number']
             else:
                 num = 0
-            print num
+           # print num
             if num == 0:
-                aqsumm = 'Air quality monitoring sensors not available'
+                aqsumm = 'Air quality sensors not available'
             if num == 1:
                 aqsumm = 'The air quality is good'
             if num == 2:
@@ -85,7 +85,7 @@ def motivator(aq,ts):
             if num >= 3:
                 aqsumm = 'The air is unhealthy'
     else:
-        aqsumm = 'Air quality monitoring tool unavailable'
+        aqsumm = 'Air quality sensors not unavailable'
     week = ts.iloc[1:8]
     return aqsumm, today, week, airstatus, brq, wq, tempstatus
 
