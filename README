@@ -16,4 +16,8 @@ The weather company key is called twcKey and was provided by TWCo
 
 To Do:
 Motivator seed has issues - need better way to rand
-Results.html needs to be made pretty
+Results.html needs to add city and state location
+check if humidity is available
+Quotes don't display  well
+Finish about page text
+Dockerize

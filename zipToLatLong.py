@@ -9,11 +9,11 @@ def getzip(x):
     startDate = now.strftime("%Y-%m-%d")
     #print startDate
    # zip = zipcode.zip
-   # zip_city = zipcode.city
-   # zip_state = zipcode.state
+    city = zipcode.city
+    state = zipcode.state
     long = zipcode.longitude
     lat = zipcode.latitude
-    return lat, long, startDate,
+    return lat, long, startDate, city, state
 
 #zip = getzip(20165)
 #print zip

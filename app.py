@@ -50,7 +50,7 @@ def result():
         #ts = tendayForecast.twcsummary
         z = motivator.motivator(aqdata,twcsummary)
 
-    return render_template("result.html",result = result,zip = zip, aqdata = aqdata,
+    return render_template("result.html",result = result,zip = zip[2], city = zip[3], state = zip[4], aqdata = aqdata,
                            airstatus = z[3], weatherquote = z[0],today = z[1],week = z[2],
                            bikequote = z[4], wetquote = z[5], tempstatus = z[6])
 
