@@ -17,4 +17,3 @@ The weather company key is called twcKey and was provided by TWCo
 To Do:
 Motivator seed has issues - need better way to rand
 Results.html needs to be made pretty
-tendayForecast.py need to put the DF results in a better format
