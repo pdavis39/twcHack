@@ -71,9 +71,9 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">Technology</h2>
                 <h2>Word cloud</h2>
-                <p>The splash page has a word cloud image that is built from mining twitter hash tags #swim, #run, and #bike using R.</p>
+                <p>The splash page has a word cloud image created in R that mines twitter using the hash tags; #swim, #run, and #bike.</p>
                 <h2>Web Application</h2>
-                <p>The web application was written in python and flask. The word cloud was written in R. All the code can be found following the link <a href="https://github.com/pdavis39/twcHack">twcHack</a> </p>
+                <p>The web application was written in python and flask. All the code can be found following the link <a href="https://github.com/pdavis39/twcHack">twcHack</a> </p>
                 <a>The image shows structure of the applictions</a>
                 <div>
                 <img src="{{ url_for('static', filename = 'tree.jpg') }}" width="400" height="500">
@@ -82,7 +82,7 @@
                 <h4>airQulity.py</h4>
                 <p>This function calls AirNow's <a href="https://docs.airnowapi.org/webservices">Zip Forecast</a> to get current or historical forecasted AQI values and categories for a reporting area by Zip code. </p>
                 <h4>app.py</h4>
-                <p>Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed.  app.py is flask package that makes the magic.</p>
+                <p>Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed.  app.py is flask package that makes the application magic happen.</p>
                 <h4>motivator.py</h4>
                 <p>motivator takes output from airQuality.py, tendayForecast.py and quotes.py and customizes a athlete weather report based on the air quality and weather variables</p>
                 <h4>quotes.py</h4>
