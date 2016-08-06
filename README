@@ -1,5 +1,11 @@
 This program uses flask and python 2.7.10
 
+You will need the following python libraries loaded to run the application.
+
+If you use pip you should be able to copy and paste the into your CLI
+
+    sudo pip install json, urllib2, Flask, datetime, numbers, random, os, urllib2, pandas
+
 To run this application:
 
     $ python app.ph
