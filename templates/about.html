@@ -12,17 +12,17 @@
     <title>About</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com//dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="http://getbootstrap.com//assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/blog/blog.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="http://getbootstrap.com//assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -80,17 +80,17 @@
                 </div>
                 <h3>Applicaiton Logic</h3>
                 <h4>airQulity.py</h4>
+                <p>This function calls AirNow's <a href="https://docs.airnowapi.org/webservices">Zip Forecast</a> to get current or historical forecasted AQI values and categories for a reporting area by Zip code. </p>
                 <h4>app.py</h4>
-                <p>air quality site text goes here</p>
+                <p>Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed.  app.py is flask package that makes the magic.</p>
                 <h4>motivator.py</h4>
-                <p>air quality site text goes here</p>
+                <p>motivator takes output from airQuality.py, tendayForecast.py and quotes.py and customizes a athlete weather report based on the air quality and weather variables</p>
                 <h4>quotes.py</h4>
-                <p>air quality site text goes here</p>
-                <p>TWC  text goes here</p>
+                <p>Proivdes customized quotes based on temperature , air quality, and preciptation</p>
                 <h4>tendayForecast.py</h4>
-                <p>air quality site text goes here</p>
+                 <p>This function calls the weather API and based on the zip code provided by the user brings back weather information used by the application to create a customized weather report.  Documenation for the API can be found at <a href="https://console.ng.bluemix.net/catalog/services/weather-company-data-for-ibm-bluemix/">Weather Company Data for IBM Bluemix</a> </p>
                 <h4>zipToLatLong.py</h4>
-                <p>air quality site text goes here</p>
+                <p>This function akes a zip code input from the web application index.html page and returns a latitude and longitude use by other functions.</p>
             </div><!-- /.blog-post -->
 
             </div><!-- /.blog-post -->
@@ -103,7 +103,7 @@
 </div><!-- /.container -->
 
 <footer class="blog-footer">
-    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>GBS & TWCo's Hack-a-Thon</a>.</p>
     <p>
         <a href="#">Back to top</a>
     </p>
@@ -115,8 +115,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="http://getbootstrap.com//dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="http://getbootstrap.com/./assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
