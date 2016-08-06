@@ -1,0 +1,34 @@
+library(twitteR)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+
+# log into twitter api
+api_key <- <insert your key here>
+api_secret <- <insert your key here>
+access_token <- <insert your key here> 
+access_token_secret <- <insert your key here> 
+setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
+
+# search twitter
+r_stats <- searchTwitter("#triathlon + #swim + #bike + #run", n=500, lang="en")
+
+#save text
+r_stats_text <- sapply(r_stats, function(x) x$getText())
+r_stats_text_corpus <- Corpus(VectorSource(r_stats_text))
+r_stats_text_corpus <- tm_map(r_stats_text_corpus, content_transformer(function(x) iconv(x, to='UTF-8-MAC', sub='byte')), mc.cores=1)
+r_stats_text_corpus <- tm_map(r_stats_text_corpus,      content_transformer(tolower))
+r_stats_text_corpus <- tm_map(r_stats_text_corpus, removePunctuation)
+r_stats_text_corpus <- tm_map(r_stats_text_corpus, function(x)removeWords(x,stopwords()))
+
+# Creating a term document matrix
+tdm <- TermDocumentMatrix(r_stats_text_corpus, control = list(stopwords = c("triathlon", "bike", "swim", "run")))
+tdm <- TermDocumentMatrix(r_stats_text_corpus)
+m <- as.matrix(tdm)
+word_freqs <- sort(rowSums(m), decreasing = TRUE)
+
+# create the data frame with the words and their frequencies
+dm <- data.frame(word = names(word_freqs), freq = word_freqs)
+# create word cloud image
+par(bg = "Grey20")
+wordcloud(dm$word, dm$freq, colors = c("tomato", "wheat", "lightblue"), scale = c(6, 0.5), random.color = TRUE, rot.per = 0.5, min.freq = 1, font = 2, family = "serif")
