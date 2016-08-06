@@ -13,15 +13,16 @@ def motivator(aq,ts):
     mintmp = ts.iloc[:1]['min_temp']
     maxtmp = ts.iloc[:1]['max_temp']
     isRain = ts.iloc[:1]['day.precip_type']
+
     # same thing to check for snow....
     if isRain[0] == 'rain':
-        airstatus = "you won't melt"
+        airstatus = "it's raining, you won't melt"
         #wet run
         #rq = quote.getwrquotes()
         #wr bike
         wq = quote.getwbquotes()
     if isRain[0] != 'rain':
-        airstatus = 'Never give up'
+        airstatus = 'Weather is fine, get out and train'
         wq = quote.gettriquotes()
     if isinstance( mintmp[0], numbers.Integral ):
         if int(mintmp[0]) < 30:
@@ -87,7 +88,8 @@ def motivator(aq,ts):
     else:
         aqsumm = 'Air quality sensors not unavailable'
     week = ts.iloc[1:8]
-    return aqsumm, today, week, airstatus, brq, wq, tempstatus
+    tq = quote.gettriquotes()
+    return aqsumm, today, week, airstatus, brq, wq, tempstatus, tq
 
 #aq = airQuality.aqdata
 #ts = tendayForecast.twcsummary
