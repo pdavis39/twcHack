@@ -18,6 +18,7 @@ def getcbquotes():
     quotenum = random.randint(0, numquotes-1)
     quote = quotelist[quotenum]
     q1 = quote
+    q1 = str(q1).strip('][')
     return q1
 # hot bike
 def gethbquotes():
@@ -34,7 +35,7 @@ def gethbquotes():
     quotenum = random.randint(0, numquotes-1)
     quote = quotelist[quotenum]
     q2 = quote
-
+    q2 = str(q2).strip('][')
     return q2
 # tri
 def gettriquotes():
@@ -51,6 +52,7 @@ def gettriquotes():
     quotenum = random.randint(0, numquotes-1)
     quote = quotelist[quotenum]
     q4 = quote
+    q4 = str(q4).strip('][')
     return q4
 # wet bike
 def getwbquotes():
@@ -67,13 +69,14 @@ def getwbquotes():
     quotenum = random.randint(0, numquotes-1)
     quote = quotelist[quotenum]
     q5 = quote
+    q5 = str(q5).strip('][')
     return q5
 
 #b = gethbquotes()
 #b = str(b)
 #b = b.encode('utf-8')
 #print 'b'
-#print b
+#print b[1:-1]
 #x = getcbquotes()
 #print 'x'
 #print x

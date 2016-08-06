@@ -56,23 +56,18 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Motivational Quotes<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">{{ bikequote }}</a></li>
-
+                <li class="active"><a><b>Motivational Quotes<span class="sr-only">(current)</span></b></a></li>
+                <li><a><b>{{ bikequote }}</b></a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">{{ wetquote }}</a></li>
-
+                <li><a><b>{{ wetquote }}</b></a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="">{{ triquote }}</a></li>
-
+                <li><a><b>{{ triquote }}</b></a></li>
         </div>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Athlete's Weather Report - {{city}}, {{state}}</h1>
-
-
 <div class="row placeholders">
     <div class="col-xs-6 col-sm-3 placeholder">
         <img src="{{ url_for('static', filename = 'swim.jpg') }}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">

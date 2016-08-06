@@ -1,9 +1,5 @@
 
-from flask import Flask, render_template, request
-from flask_images import resized_img_src
-from werkzeug.datastructures import ImmutableMultiDict
-#from pyzipcode import ZipCodeDatabase
-import datetime
+from flask import Flask, render_template, request, redirect
 import zipToLatLong
 import airQuality
 import tendayForecast
@@ -19,12 +15,17 @@ app = Flask(__name__)
 def athlete():
     return render_template('index.html')
 
+@app.route('/error')
+def error():
+    return render_template('error.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
+
     if request.method == 'POST':
         result = request.form
         imd = result
@@ -34,6 +35,9 @@ def result():
         #call zip
         global zip
         zip = zipToLatLong.getzip(y)
+        if zip == 'null':
+            return redirect('http://localhost:5000/error', code=302)
+        #print 'zip',len(zip)
         global aqdata
         #call aq
         now = datetime.datetime.now()
@@ -53,6 +57,7 @@ def result():
 
     return render_template("result.html",result = result,zip = zip[2], city = zip[3], state = zip[4], aqdata = aqdata, airstatus = z[3],
                            weatherquote = z[0],today = z[1],week = z[2],bikequote = z[4], wetquote = z[5], tempstatus = z[6], triquote = z[7])
+
 
 if __name__ == '__main__':
     app.run(debug = True)
