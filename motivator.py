@@ -16,14 +16,12 @@ def motivator(aq,ts):
 
     # same thing to check for snow....
     if isRain[0] == 'rain':
-        airstatus = "it's raining, you won't melt"
-        #wet run
-        #rq = quote.getwrquotes()
-        #wr bike
+        airstatus = "You won't melt, get out and train"
         wq = quote.getwbquotes()
     if isRain[0] != 'rain':
         airstatus = 'Weather is fine, get out and train'
         wq = quote.gettriquotes()
+
     if isinstance( mintmp[0], numbers.Integral ):
         if int(mintmp[0]) < 30:
             tempstatus = 'Yeah its cold'
@@ -52,18 +50,23 @@ def motivator(aq,ts):
     if isinstance( maxtmp[0], numbers.Integral ):
         if int(maxtmp[0]) < 30:
             tempstatus = 'Yeah its cold'
+            brq = quote.getcbquotes()
     if isinstance( maxtmp[0], numbers.Integral ):
         if int(maxtmp[0]) > 30 and int(mintmp[0]) < 65:
             tempstatus = 'layer and get out there'
+            brq = quote.gethbquotes()
     if isinstance( maxtmp[0], numbers.Integral ):
         if int(maxtmp[0]) > 65 and int(maxtmp[0]) < 85:
             tempstatus = 'great day to run'
+            brq = quote.gethbquotes()
     if isinstance( maxtmp[0], numbers.Integral ):
         if int(maxtmp[0]) > 86 and int(maxtmp[0]) < 95:
             tempstatus = 'stay hydrated'
+            brq = quote.gethbquotes()
     if isinstance( maxtmp[0], numbers.Integral ):
         if int(maxtmp[0]) > 95:
             tempstatus = 'treadmill may be your best bet'
+            brq = quote.gethbquotes()
     #print 'hmmm',mintmp, maxtmp
 
     if aq:

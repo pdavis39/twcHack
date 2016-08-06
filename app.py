@@ -52,18 +52,7 @@ def result():
         z = motivator.motivator(aqdata,twcsummary)
 
     return render_template("result.html",result = result,zip = zip[2], city = zip[3], state = zip[4], aqdata = aqdata, airstatus = z[3],
-                           weatherquote = z[0],today = z[1],week = z[2],bikequote = z[4], wetquote = z[5], tempstatus = z[6],
-                           triquote = z[7])
-
-
-#<h2>temp status</h2>
-
-#<h3>{{ tempstatus }}</h3>
-
-#<h2>calculated weather quote</h2>
-
-#<h3>{{ airstatus }}</h3>
-
+                           weatherquote = z[0],today = z[1],week = z[2],bikequote = z[4], wetquote = z[5], tempstatus = z[6], triquote = z[7])
 
 if __name__ == '__main__':
     app.run(debug = True)

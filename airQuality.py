@@ -15,11 +15,10 @@ def airquality(x,y,z):
     # Convert it to a Python dictionary
     aqresult = json.loads(json_text)
     if aqresult:
-
         return aqresult
 
-#aqdata = airquality(39.044855,-77.38701,'2016-08-02')
-
+#aqdata = airquality(39.044855,-77.38701,'2016-08-06')
+#print aqdata
 #print t
 #for line in aqdata:
 #    print line['Category'], line['ParameterName']
