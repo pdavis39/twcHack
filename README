@@ -1,23 +1,18 @@
-This program uses flask and python Python 2.7.10
+This program uses flask and python 2.7.10
 
-To run this application at the command prompt
+To run this application:
 
-$ python app.ph
+    $ python app.ph
 
-Open your browser to: http://localhost:5000/#
+    Open browser to: http://localhost:5000/#
 
 config.json is where API keys are stored for both the weather company and AirNow.
-If you clone this project you will need to get your own keys
+you will need to get your own keys
+    AirNow key is called airQKey
+    The weather company key is called twcKey
 
 Documentation on AirNow can be found at: https://docs.airnowapi.org/forecastsbyzip/docs
-AirNow key is called airQKey
+Documentation for The Weather company can be found on IBM's Bluemix
 
-The weather company key is called twcKey and was provided by TWCo
 
-To Do:
-Motivator seed has issues - need better way to rand
-Results.html needs to add city and state location
-check if humidity is available
-Quotes don't display  well
-Finish about page text
-Dockerize
+
