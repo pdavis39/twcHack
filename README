@@ -12,7 +12,7 @@ you will need to get your own keys
     The weather company key is called twcKey
 
 Documentation on AirNow can be found at: https://docs.airnowapi.org/forecastsbyzip/docs
-Documentation for The Weather company can be found on IBM's Bluemix
+Documentation for The Weather company's APIs can be found at: https://console.ng.bluemix.net/catalog/services/weather-company-data-for-ibm-bluemix/
 
 
 
