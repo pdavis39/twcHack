@@ -67,8 +67,19 @@
                     <li><p>Provide the capability to allow users to register and get daily updates as well as weather alerts</p></li>
                     <li><p>Provide the capability to access the application by mobile devices </p></li>
                     <li><p>Move quotes from files into a database </p></li>
+                    <li><p>Evaluate if historical peformance against temperature provides insights </p></li>
                 </li>
-           
+                 <h2>Historical weather temperature compared against TrainingPeaks data</h2>
+                  <p>The scatter charts data was collected during trainng runs.</p>
+                 <div>
+                <img src="{{ url_for('static', filename = 'tempVdist.jpeg') }}" width="550" height="350">
+                </div>
+                <p>The chart above shows I have a sweet spot for when I run longer distances between 50 and 80 degrees.</p>
+
+                <div>
+                <img src="{{ url_for('static', filename = 'timeVtemp.jpeg') }}" width="550" height="350">
+                </div>
+            <p>The chart above shows calculated historical temperatures aligned to my historic run trainings.</p>
             </div><!-- /.blog-post -->
 
             <div class="blog-post">
