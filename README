@@ -1,6 +1,7 @@
-This program uses flask and python 2.7.10
+This hack uses flask and python 2.7.10 and was built on a Mac running OSX v10.11.6
 
 You will need the following python libraries loaded to run the application.
+    json, urllib2, Flask, datetime, numbers, random, os, pandas
 
 If you use pip you should be able to copy and paste the into your CLI
 
@@ -12,13 +13,17 @@ To run this application:
 
     Open browser to: http://localhost:5000/#
 
+    I recommend you look at About: http://localhost:5000/about, the web pages documents teh motivation and technology used to create the hack
+
+    Suggested zip code to try: 20001
+    For fun try: 22803
+    Try a zipe code relevant to your training location
+
 config.json is where API keys are stored for both the weather company and AirNow.
-you will need to get your own keys
+
+For the hack the keys are provide, otherwise you will need to get your own keys
     AirNow key is called airQKey
     The weather company key is called twcKey
 
-Documentation on AirNow can be found at: https://docs.airnowapi.org/forecastsbyzip/docs
 Documentation for The Weather company's APIs can be found at: https://console.ng.bluemix.net/catalog/services/weather-company-data-for-ibm-bluemix/
-
-
-
+Documentation on AirNow can be found at: https://docs.airnowapi.org/forecastsbyzip/docs
