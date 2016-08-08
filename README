@@ -9,6 +9,8 @@ If you use pip you should be able to copy and paste the into your CLI
 
 To run this application:
 
+    Change the file location of config.json in loadConfig.py to your systems location
+
     $ python app.ph
 
     Open browser to: http://localhost:5000/#
