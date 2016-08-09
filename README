@@ -1,5 +1,4 @@
 This hack uses flask and python 2.7.10 and was built on a Mac running OSX v10.11.6
-It has been ported and tested on Windows 7
 
 You will need the following python libraries run the application.
     json, urllib2, Flask, datetime, numbers, random, os, pandas
@@ -14,8 +13,8 @@ To run this application:
         $ python app.ph
 
     Open browser to: http://localhost:5000/#
-    
-Information about the application   
+
+Information about the application
     I recommend you look at About: http://localhost:5000/about, the web pages documents the motivation and technology used to create the hack
 
     Suggested zip code to try: 20001
