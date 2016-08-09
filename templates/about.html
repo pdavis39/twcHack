@@ -70,11 +70,11 @@
                     <li><p>Evaluate if historical peformance against temperature provides insights </p></li>
                 </li>
                  <h2>Initial analysis of historical weather data from TWCo's API compared against real TrainingPeaks data for the same time period</h2>
-                  <p>The scatter charts data was collected during trainng runs.</p>
+                  <p>The scatter charts data was collected during training runs.</p>
                  <div>
                 <img src="{{ url_for('static', filename = 'tempVdist.jpeg') }}" width="550" height="350">
                 </div>
-                <p>The chart above shows I have a temperature range sweet spot (i.e., between 50 and 80 degrees) for longer run distances.</p>
+                <p>The chart above shows the athlete has a temperature range sweet spot (i.e., between 50 and 80 degrees) for longer run distances.</p>
 
                 <div>
                 <img src="{{ url_for('static', filename = 'timeVtemp.jpeg') }}" width="550" height="350">
@@ -90,7 +90,7 @@
                 <img src="{{ url_for('static', filename = 'wordcloud.jpeg') }}" width="200" height="200">
                 </div>
                 <h2>Web Application</h2>
-                <p>The web application was written in python and flask. All the code can be at <a href="https://github.com/pdavis39/twcHack">twcHack</a> </p>
+                <p>The web application was written in python and flask and is located at <a href="https://github.com/pdavis39/twcHack">twcHack</a> </p>
                 <a>The image shows structure of the flask appliction</a>
                 <div>
                 <img src="{{ url_for('static', filename = 'tree.jpg') }}" width="400" height="500">
@@ -101,9 +101,9 @@
                 <h4>app.py</h4>
                 <p>Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed.</p>
                 <h4>motivator.py</h4>
-                <p>motivator takes output from airQuality.py, tendayForecast.py and quotes.py and customizes a user's weather report based on the air quality and weather features.</p>
+                <p>Motivator takes output from airQuality.py, tendayForecast.py and quotes.py and customizes a user's weather report based on the air quality and weather features.</p>
                 <h4>quotes.py</h4>
-                <p>Proivdes customized quotes based on temperature , air quality, and preciptation.</p>
+                <p>Proivdes customized quotes based on temperature, air quality, and preciptation.</p>
                 <h4>tendayForecast.py</h4>
                  <p>This function calls the weather API and based on the zip code provided by the user brings back weather information. Documenation for the API can be found at <a href="https://console.ng.bluemix.net/catalog/services/weather-company-data-for-ibm-bluemix/">Weather Company Data for IBM Bluemix</a> </p>
                 <h4>zipToLatLong.py</h4>
