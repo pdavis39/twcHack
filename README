@@ -1,4 +1,5 @@
 This hack uses flask and python 2.7.10 and was built on a Mac running OSX v10.11.6
+It has been ported and tested on Windows 7
 
 You will need the following python libraries run the application.
     json, urllib2, Flask, datetime, numbers, random, os, pandas
