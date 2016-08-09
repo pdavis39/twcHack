@@ -4,25 +4,25 @@ You will need the following python libraries run the application.
     json, urllib2, Flask, datetime, numbers, random, os, pandas
 
 To run this application:
+    Parameter changes to run in your environment
+        Change the file location of config.json in loadConfig.py to your systems location - examples provided as code comments
+        Change file location tendayForecast.py - examples provided as code comments
+        Change file location in quotes.py - example provided as code comments
 
-    Change the file location of config.json in loadConfig.py to your systems location - examples provided as code comments
-    Change file location tendayForecast.py - examples provided as code comments
-    Change file location in quotes.py - example provided as code comments
-
-    At command line type:
-    $ python app.ph
+        At command line type:
+        $ python app.ph
 
     Open browser to: http://localhost:5000/#
-
+    
+Information about the application   
     I recommend you look at About: http://localhost:5000/about, the web pages documents the motivation and technology used to create the hack
 
     Suggested zip code to try: 20001
     For fun try: 22803
     Try a zipe code relevant to your training location
 
-config.json is where API keys are stored for both the weather company and AirNow.
 
-For the hack the keys are provide, otherwise you will need to get your own keys
+config.json is where API keys are stored for both the weather company and AirNow.
     AirNow key is called airQKey
     The weather company key is called twcKey
 
