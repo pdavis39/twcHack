@@ -22,7 +22,7 @@ def motivator(aq,ts):
     if isRain[0] != 'rain':
         airstatus = 'Weather is fine, get out and train'
         wq = quote.gettriquotes()
-
+    # need to deal with NaN results
     if math.isnan(mintmp[0]):
         tempstatus = 'just do it'
         brq = quote.gethbquotes()
