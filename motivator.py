@@ -1,5 +1,6 @@
 import numbers
 import quote
+import math
 
 
 # qoutes - https://github.com/gbigwood/Quote-generator/blob/master/src/randomquotes.py
@@ -22,51 +23,60 @@ def motivator(aq,ts):
         airstatus = 'Weather is fine, get out and train'
         wq = quote.gettriquotes()
 
-    if isinstance( mintmp[0], numbers.Integral ):
+    if math.isnan(mintmp[0]):
+        tempstatus = 'just do it'
+        brq = quote.gethbquotes()
+    else:
+
+
         if int(mintmp[0]) < 30:
             tempstatus = 'Yeah its cold'
             brq = quote.getcbquotes()
-    if isinstance( mintmp[0], numbers.Integral ):
+
         if int(mintmp[0]) > 30 and int(mintmp[0]) < 65:
             tempstatus = 'layer and get out there'
             brq = quote.getcbquotes()
-    if isinstance( mintmp[0], numbers.Integral ):
+
         if int(mintmp[0]) > 65 and int(mintmp[0]) < 85:
             tempstatus = 'great day to run'
             #hb hot bike
             brq = quote.gethbquotes()
-    if isinstance( mintmp[0], numbers.Integral ):
+
         if int(mintmp[0]) > 86 and int(mintmp[0]) < 95:
             tempstatus = 'stay hydrated'
             #hb hot bike
             brq = quote.gethbquotes()
-    if isinstance( mintmp[0], numbers.Integral ):
+
         if int(mintmp[0]) > 95:
             tempstatus = 'treadmill may be your best bet'
             #cb hot bike
             brq = quote.gethbquotes()
 
-
-    if isinstance( maxtmp[0], numbers.Integral ):
+    if math.isnan(maxtmp[0]):
+        tempstatus = 'just do it'
+        brq = quote.gethbquotes()
+    else:
         if int(maxtmp[0]) < 30:
             tempstatus = 'Yeah its cold'
             brq = quote.getcbquotes()
-    if isinstance( maxtmp[0], numbers.Integral ):
+
         if int(maxtmp[0]) > 30 and int(mintmp[0]) < 65:
             tempstatus = 'layer and get out there'
             brq = quote.gethbquotes()
-    if isinstance( maxtmp[0], numbers.Integral ):
+
         if int(maxtmp[0]) > 65 and int(maxtmp[0]) < 85:
             tempstatus = 'great day to run'
             brq = quote.gethbquotes()
-    if isinstance( maxtmp[0], numbers.Integral ):
+
         if int(maxtmp[0]) > 86 and int(maxtmp[0]) < 95:
             tempstatus = 'stay hydrated'
             brq = quote.gethbquotes()
-    if isinstance( maxtmp[0], numbers.Integral ):
+
         if int(maxtmp[0]) > 95:
             tempstatus = 'treadmill may be your best bet'
             brq = quote.gethbquotes()
+
+
     #print 'hmmm',mintmp, maxtmp
 
     if aq:
